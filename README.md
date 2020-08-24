@@ -86,7 +86,7 @@ ok: [localhost] => {
 
 ### 5.
 DRY (Don't Repeat Yourself). Ansible resembles normal programming language. Like normal language, ansible has different mechanisms to help you be DRY. But it requires that you plan your code in advance. When writing the code think how you can make it reusable.  
-Big blocks:
+#### Big blocks:
 
 | name | URL |
 |------|-----|
@@ -97,7 +97,7 @@ Big blocks:
 | include_tasks | https://docs.ansible.com/ansible/latest/modules/include_tasks_module.html#include-tasks-module |
 
  #### Small blocks:  
- Blocks within a role. (include/import)_tasks, (include/import)_role. How it works. Imagine a situation you use **uri** module for sending API requests. Let's say it is POST requests. Instead of repeating uri 10 times with all settings we can create, sort of, method and use it anywhere. As with method in normal programming language, our method also accepts input parameters.  
+Blocks within a role. (include/import)_tasks, (include/import)_role. How it works. Imagine a situation you use **uri** module for sending API requests. Let's say it is POST requests. Instead of repeating uri 10 times with all settings we can create, sort of, method and use it anywhere. As with method in normal programming language, our method also accepts input parameters.  
 Example:
 
 send_post.yml
@@ -140,7 +140,7 @@ Use blocks. https://docs.ansible.com/ansible/latest/user_guide/playbooks_blocks.
            state: absent
 ```
 
-### 7
+### 7.
 The most common best practice is try not to use command and shell modules. It is because these modules are not idempotent. Several approaches help to mitigate the problem. Use:   
 **when** condition  
 **creates** (If it already exists, this step won't be run.)  

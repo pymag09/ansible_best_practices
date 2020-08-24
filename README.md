@@ -85,8 +85,8 @@ ok: [localhost] => {
 
 5. DRY (Don't Repeat Yourself). Ansible resembles normal programming language. Like normal language, ansible has different mechanisms to help you be DRY. But it requires that you plan your code in advance. When writing the code think how you can make it reusable.  
 Big blocks:
-|  |  |
-|---|---|
+| name | URL |
+|------|-----|
 | import_playbook | https://docs.ansible.com/ansible/latest/modules/import_playbook_module.html#import-playbook-module|
 | import_role | https://docs.ansible.com/ansible/latest/modules/import_role_module.html#import-role-module |
 | include_role | https://docs.ansible.com/ansible/latest/modules/include_role_module.html#include-role-module |

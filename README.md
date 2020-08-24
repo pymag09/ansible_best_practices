@@ -96,7 +96,8 @@ DRY (Don't Repeat Yourself). Ansible resembles normal programming language. Like
 | import_tasks | https://docs.ansible.com/ansible/latest/modules/import_tasks_module.html#import-tasks-module |
 | include_tasks | https://docs.ansible.com/ansible/latest/modules/include_tasks_module.html#include-tasks-module |
 
- #### Small blocks:  
+ #### Small blocks:
+ 
 Blocks within a role. (include/import)_tasks, (include/import)_role. How it works. Imagine a situation you use **uri** module for sending API requests. Let's say it is POST requests. Instead of repeating uri 10 times with all settings we can create, sort of, method and use it anywhere. As with method in normal programming language, our method also accepts input parameters.  
 Example:
 

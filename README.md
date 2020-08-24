@@ -137,7 +137,12 @@ URL and BODY_VAR are method parameters.
            state: absent
 ```
 
-7. The most common best practice is try not to use command and shell modules. It is because these modules are not idempotent. Several approaches help to mitigate the problem. Use **when** condition, **creates** (If it already exists, this step won't be run.) or **removes** (If it already exists, this step will be run.). Nevertheless just stay away from command and shell **IF** it is possible.
+7. The most common best practice is try not to use command and shell modules. It is because these modules are not idempotent. Several approaches help to mitigate the problem. Use:   
+**when** condition  
+**creates** (If it already exists, this step won't be run.)  
+**removes** (If it already exists, this step will be run.).  
+**changed_when:**  
+Nevertheless just stay away from command and shell **IF** it is possible.
 
 8. Do not use tags. Tags could be a nightmare for people who are getting to know your code. Tag combination multiplies the number of possible playbook scenarios. But if you have no choice describe tags and its combination in the README file with great diligence. However not all tags so bad. There are exceptions.
 **always**, **never** - https://docs.ansible.com/ansible/latest/user_guide/playbooks_tags.html#sts=Special%20Tags%C2%B6  

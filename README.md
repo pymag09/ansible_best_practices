@@ -48,9 +48,7 @@ PLAY [Variables scope]
   "MY_VAR": "I am glozal var"
   }
 ```
-
-In conclusion. We should define variables within file system.
-100% of variables must be defined explicitly. In a role, you have a defaults/main.yml file. Values in this file will have the lowest precedence, so put variable here even if it is empty. It will make contributors life easier, in particular for those who see the code for the first time.
+In conclusion. We should define variables within file system. 100% of variables must be defined explicitly. In a role, you have a defaults/main.yml file. Values in this file will have the lowest precedence, so put variable here even if it is empty. It will make contributors life easier, in particular for those who see the code for the first time.
 
    2. If the role uses many different variables, may be they even implement sophisticated logic, try to describe them in the README file. **ansible-galaxy init** generates a README template for your convenience. When you clone the code from git and it is something completely new for you, you probably expect to see sufficient information in order to understand what the role use as the input and what will be the output just by reading the README file and the code.
      An example of a bad practice would be when code and description are separated, for instance code is in git, description is on the wiki page. There is no guarantee that contributors update both, code and the wiki page. Usually work ends in git PR.

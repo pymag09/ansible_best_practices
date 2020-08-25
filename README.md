@@ -219,3 +219,6 @@ Use advices regarding content organisation from official ansible page https://do
 
 ### 13.
 Use dedicated directory for community roles within roles directory from previous advice
+
+### 14.
+Use testing framework for ansible, known as molecule (https://molecule.readthedocs.io/en/latest/index.html). The framework allows you to test your code from different directions. Apart from tradicional testing it also can run all kinds of linters and it tests you code for idempotence.

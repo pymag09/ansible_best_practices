@@ -222,3 +222,21 @@ Use dedicated directory for community roles within roles directory from previous
 
 ### 14.
 Use testing framework for ansible, known as molecule (https://molecule.readthedocs.io/en/latest/index.html). The framework allows you to test your code from different directions. Apart from tradicional testing it also can run all kinds of linters and it tests you code for idempotence.
+
+### 15. (OPTIONAL)
+Item #12. Directory layout. We can use the layout, as a base for "versioning".  What is versioning in the ansible world? It is an approach which uses git and allows you to run different versions of role, just by specifying version. The version could be a tag, a branch or a commit hash. Here is the link https://docs.ansible.com/ansible/latest/galaxy/user_guide.html#installing-roles-from-galaxy which describes a procedure. Our task is to adjust the procedure to meet our requirements for role versioning.  
+#### requirements.yaml:
+```
+---
+
+- src: git@gitlab.company.com:mygroup/ansible-base.git
+  scm: git
+  version: "0.1"
+
+...
+```
+Allowed attributes:
+* src
+* scm
+* version
+* name

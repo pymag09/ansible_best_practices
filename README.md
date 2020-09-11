@@ -136,8 +136,8 @@ Use blocks. https://docs.ansible.com/ansible/latest/user_guide/playbooks_blocks.
   rescue:
     ...
 ```
-
-A scenario when it also could be useful. At the end of execution you may need to run code no matter what. For example some files need to be deleted even if play fails.
+`block/rescue` is the great alternative for `ignore_errors`. An advanced error handling.  
+Apart from that, a scenario when it could be useful. At the end of execution you may need to run code no matter what. For example some files need to be deleted even if play fails.
 
 ```
   - block:

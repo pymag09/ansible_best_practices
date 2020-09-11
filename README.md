@@ -129,7 +129,16 @@ This is reusable code. Now we can call it any time we want.
 URL and BODY_VAR are method parameters.
 
 ### 6.
-Use blocks. https://docs.ansible.com/ansible/latest/user_guide/playbooks_blocks.html Apply tasks options only once by grouping them. Also block can be used as try/catch block in traditional programming language. A scenario when it could be useful. At the end of execution you may need to run code no matter what. For example some files need to be deleted even if play fails.
+Use blocks. https://docs.ansible.com/ansible/latest/user_guide/playbooks_blocks.html Apply tasks options only once by grouping them. Also block can be used as try/catch block in traditional programming language. 
+```
+- block:
+    ...
+  rescue:
+    ...
+```
+
+A scenario when it also could be useful. At the end of execution you may need to run code no matter what. For example some files need to be deleted even if play fails.
+
 ```
   - block:
     - name: .....

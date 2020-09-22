@@ -1,4 +1,4 @@
-The crucial part of Ansible is variables.  One of the dubious thing of Ansible is that it offers too much freedom. This has advantages and disadvantages. A disadvantage would be the complexity along with high responsibility. In its turn, an advantage, would be flexibility. Therefore let's revise what we know about variables and try to arrange the information, make it simpler.  
+The crucial part of Ansible is variables.  One of the dubious things of Ansible is that it offers too much freedom. This has advantages and disadvantages. A disadvantage would be the complexity along with high responsibility. In its turn, an advantage, would be flexibility. Therefore let's revise what we know about variables and try to arrange the information, make it simpler.  
 Variables could be grouped into two categories:
 * variables on filesystem
 * variables in code
